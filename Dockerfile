@@ -14,7 +14,7 @@ ENV REDPEN_VERSION 1.7.6
 RUN wget https://github.com/redpen-cc/redpen/releases/download/redpen-1.7.6/redpen-$REDPEN_VERSION.tar.gz && \
     tar xvf redpen-$REDPEN_VERSION.tar.gz && \
     cp -av redpen-distribution-$REDPEN_VERSION/* /usr/local/ && \
-    rm -rf redpen-{,distribution-}$REDPEN_VERSION*
+    rm -rfv redpen-*$REDPEN_VERSION*
 
 WORKDIR $WORKSPACE_DIR
 VOLUME $WORKSPACE_DIR
