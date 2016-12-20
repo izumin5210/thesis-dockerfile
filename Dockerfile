@@ -10,6 +10,9 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+RUN tlmgr conf updmap --conffile /usr/local/share/texmf/web2c/texmf.cnf \
+        shell_escape_commands extractbb,`kpsewhich -var-value=shell_escape_commands`
+
 ENV REDPEN_VERSION 1.7.6
 RUN wget https://github.com/redpen-cc/redpen/releases/download/redpen-1.7.6/redpen-$REDPEN_VERSION.tar.gz && \
     tar xvf redpen-$REDPEN_VERSION.tar.gz && \
