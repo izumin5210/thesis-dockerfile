@@ -1,4 +1,5 @@
 FROM openjdk:8-jdk
+MAINTAINER Masayuki Izumi <masayuki@izumin.info>
 
 ENV WORKSPACE_DIR /data
 
