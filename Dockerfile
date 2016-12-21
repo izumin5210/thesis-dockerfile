@@ -15,7 +15,7 @@ RUN tlmgr conf updmap --conffile /usr/local/share/texmf/web2c/texmf.cnf \
         shell_escape_commands extractbb,`kpsewhich -var-value=shell_escape_commands`
 
 ENV REDPEN_VERSION 1.7.6
-RUN wget https://github.com/redpen-cc/redpen/releases/download/redpen-1.7.6/redpen-$REDPEN_VERSION.tar.gz && \
+RUN wget https://github.com/redpen-cc/redpen/releases/download/redpen-$REDPEN_VERSION/redpen-$REDPEN_VERSION.tar.gz && \
     tar xvf redpen-$REDPEN_VERSION.tar.gz && \
     cp -av redpen-distribution-$REDPEN_VERSION/* /usr/local/ && \
     rm -rfv redpen-*$REDPEN_VERSION*
